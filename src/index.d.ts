@@ -12,6 +12,6 @@ declare namespace unfetch {
   export type IsomorphicRequest = Request | NodeRequest
 }
 
-declare const unfetch: typeof fetch;
-
-export default unfetch;
+declare module "unfetch" {
+	export const unfetch: typeof fetch;
+}
